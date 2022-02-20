@@ -40,6 +40,8 @@ public class amazonSearchClass {
 				.findElements(By.xpath("//span[@class='a-size-medium a-color-base a-text-normal']"));
 		List<WebElement> ProductPrice = driver.findElements(By.xpath("//span[@class='a-price-whole']"));
 
+		System.out.println("Search Result" +ProductName.size());
+		
 		for (WebElement name : ProductName) {
 
 			System.out.println("name ----" + name.getText());
