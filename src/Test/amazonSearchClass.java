@@ -39,12 +39,15 @@ public class amazonSearchClass {
 		List<WebElement> ProductName = driver
 				.findElements(By.xpath("//span[@class='a-size-medium a-color-base a-text-normal']"));
 		List<WebElement> ProductPrice = driver.findElements(By.xpath("//span[@class='a-price-whole']"));
-		
-		System.out.println("Search Result" +ProductName.size());
-		
-		for (int count=0;count<ProductName.size();count++) {
-			System.out.println("ProductName --"+ProductName.get(count).getText() +    " ---" +ProductPrice.get(count).getText());;	
-			
+
+		System.out.println("Search Result" + ProductName.size());
+
+		for (int result = 0; result < ProductName.size(); result++) {
+
+			System.out.println(
+					"ProductName --" + ProductName.get(result).getText() + " ---ProductPrice ---" + ProductPrice.get(result).getText());
+			;
+
 		}
 		driver.close();
 
